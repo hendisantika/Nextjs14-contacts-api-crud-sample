@@ -1,18 +1,18 @@
 import React, {useEffect, useState} from 'react';
 
 const Index = () => {
-    const [products, setProducts] = useState([]);
+    const [contacts, setContacts] = useState([]);
 
     useEffect(() => {
         fetch('/api/read')
             .then(response => response.json())
-            .then(data => setProducts(data))
-            .catch(error => console.error('Error fetching products:', error));
+            .then(data => setContacts(data))
+            .catch(error => console.error('Error fetching contacts:', error));
     }, []);
 
     return (
         <ul>
-            {products.map(product => (
+            {contacts.map(product => (
                 <li key={product.id}>{product.name}</li>
             ))}
         </ul>
