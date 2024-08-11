@@ -16,6 +16,31 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### List Commands
+
+#### Add New Contact
+
+```shell
+curl --location 'localhost:3000/api/create' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "Itadori Yuji",
+  "email": "yuji@yopmail.com",
+  "phone": "+6281321411800",
+  "password": "123456"
+}'
+```
+
+#### List All contacts
+
+```shell
+curl --location 'localhost:3000/api/read'
+```
+
+#### Edit Cantact
+
+####  
+
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
